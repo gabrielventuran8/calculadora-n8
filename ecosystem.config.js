@@ -2,9 +2,8 @@ module.exports = {
   apps: [
     {
       name: 'Calculator',
-      script: 'npm',
-      args: 'start',
-      interpreter: 'none',
+      script: 'server.mjs',
+      interpreter: 'node',
       exec_mode: 'fork'
     }
   ]
