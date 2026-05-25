@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'Calculator',
       script: 'npm',
-      args: 'run dev',
+      args: 'start',
       interpreter: 'none',
       exec_mode: 'fork'
     }

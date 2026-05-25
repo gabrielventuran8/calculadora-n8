@@ -14,4 +14,9 @@ export default defineConfig({
     port: 5173,
     allowedHosts: ['calc.n8inc.com.br']
   },
+  preview: {
+    host: '0.0.0.0',
+    port: 5173,
+    allowedHosts: ['calc.n8inc.com.br']
+  },
 })
