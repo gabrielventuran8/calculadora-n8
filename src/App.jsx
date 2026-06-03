@@ -104,7 +104,7 @@ const DEFAULT_EMPS = {
       {id:"301", an:3, tp:"Padrão", ar:77.10,  q:2, vg:2, vl:null,      st:"V"},
       {id:"302", an:3, tp:"Padrão", ar:89.12,  q:2, vg:1, vl:null,      st:"V"},
       {id:"401", an:4, tp:"Padrão", ar:77.10,  q:2, vg:2, vl:null,      st:"V"},
-      {id:"402", an:4, tp:"Padrão", ar:89.12,  q:2, vg:2, vl:862870.24, st:"D"},
+      {id:"402", an:4, tp:"Padrão", ar:89.12,  q:2, vg:2, vl:862870.24, st:"V"},
       {id:"501", an:5, tp:"Padrão", ar:77.10,  q:2, vg:2, vl:null,      st:"V"},
       {id:"502", an:5, tp:"Padrão", ar:89.12,  q:2, vg:2, vl:null,      st:"V"},
       {id:"601", an:6, tp:"Duplex", ar:97.74,  q:2, vg:2, vl:null,      st:"V"},
@@ -812,7 +812,7 @@ function StepEmp({ emps, empId, setEmpId, onNext }) {
               </div>
               <div style={{paddingLeft:26,fontFamily:C.ff,fontSize:12,color:C.muted}}>{e.end}</div>
               <div style={{paddingLeft:26,marginTop:6,display:"flex",gap:18,flexWrap:"wrap"}}>
-                {[["Entrega",e.entrega],["Obra",`${e.mesesObra} meses`],["Disponíveis",`${disp} / ${e.uns.length}`,"#4ade80"]].map(([l,v,c])=>(
+                {[["Entrega",e.entrega],["Obra",e.id === "liv" ? "1 mês" : `${e.mesesObra} meses`],["Disponíveis",`${disp} / ${e.uns.length}`,"#4ade80"]].map(([l,v,c])=>(
                   <span key={l} style={{fontFamily:C.ff,fontSize:12}}>
                     <span style={{color:"#5a5060"}}>{l}: </span>
                     <span style={{color:c||"#c8c0b0"}}>{v}</span>
