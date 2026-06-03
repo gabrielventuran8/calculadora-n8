@@ -97,7 +97,7 @@ const DEFAULT_EMPS = {
   liv: {
     id:"liv", nome:"Residencial LIV", tag:"Fase Final",
     end:"Rua Luiz Victorino Ordine, 1744 — São Pedro, São José dos Pinhais",
-    entrega:"Julho / 2026", mesesObra:4, maxParcel:4, ind:"INCC-DI",
+    entrega:"Julho / 2026", mesesObra:1, maxParcel:4, ind:"INCC-DI",
     uns:[
       {id:"201", an:2, tp:"Garden", ar:96.25,  q:2, vg:2, vl:787052.34, st:"V"},
       {id:"202", an:2, tp:"Garden", ar:108.01, q:2, vg:2, vl:956351.27, st:"D"},
