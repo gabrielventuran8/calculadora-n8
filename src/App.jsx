@@ -104,7 +104,7 @@ const DEFAULT_EMPS = {
       {id:"301", an:3, tp:"Padrão", ar:77.10,  q:2, vg:2, vl:null,      st:"V"},
       {id:"302", an:3, tp:"Padrão", ar:89.12,  q:2, vg:1, vl:null,      st:"V"},
       {id:"401", an:4, tp:"Padrão", ar:77.10,  q:2, vg:2, vl:null,      st:"V"},
-      {id:"402", an:4, tp:"Padrão", ar:89.12,  q:2, vg:2, vl:862870.24, st:"D"},
+      {id:"402", an:4, tp:"Padrão", ar:89.12,  q:2, vg:2, vl:862870.24, st:"V"},
       {id:"501", an:5, tp:"Padrão", ar:77.10,  q:2, vg:2, vl:null,      st:"V"},
       {id:"502", an:5, tp:"Padrão", ar:89.12,  q:2, vg:2, vl:null,      st:"V"},
       {id:"601", an:6, tp:"Duplex", ar:97.74,  q:2, vg:2, vl:null,      st:"V"},
