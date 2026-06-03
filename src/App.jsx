@@ -288,7 +288,7 @@ function gerarPDF({ emp, selUnits, comp, desc, descOn, fluxo, vlTabela, vlLiq, b
   <div class="row"><span class="lbl">Empreendimento</span><span class="val">${emp.nome}</span></div>
   <div class="row"><span class="lbl">Endereço</span><span class="val" style="font-size:10px;max-width:58%">${emp.end}</span></div>
   <div class="row"><span class="lbl">Previsão de entrega</span><span class="val">${emp.entrega}</span></div>
-  <div class="row"><span class="lbl">Prazo de obra</span><span class="val">${emp.mesesObra} meses</span></div>
+  <div class="row"><span class="lbl">Prazo de obra</span><span class="val">${plural(emp.mesesObra, `${emp.mesesObra} mês`, `${emp.mesesObra} meses`)}</span></div>
   <div class="row" style="border:none"><span class="lbl">Índice de reajuste</span><span class="val">${emp.ind}</span></div>
 </div>
 
@@ -332,8 +332,8 @@ ${descOn?`<div class="sec">
   ${[
     {l:"Sinal de negócio",p:pv("sinal"),sub:"No ato da assinatura do contrato"},
     {l:"Financiamento CEF",p:pv("financ"),sub:"Apoio à Produção · liberação nas chaves"},
-    {l:`Parcelamento — ${comp.mesesParcel||emp.mesesObra}x`,p:pv("parcel"),sub:`${comp.mesesParcel||emp.mesesObra} parcelas mensais durante a obra · ${emp.ind}`},
-    {l:`Balões — ${comp.numBaloes}x`,p:pv("baloes"),sub:`${comp.numBaloes} parcelas fixas durante a obra · ${emp.ind}`},
+    {l:`Parcelamento — ${comp.mesesParcel||emp.mesesObra}x`,p:pv("parcel"),sub:plural(comp.mesesParcel||emp.mesesObra, `${comp.mesesParcel||emp.mesesObra} parcela mensal durante a obra · ${emp.ind}`, `${comp.mesesParcel||emp.mesesObra} parcelas mensais durante a obra · ${emp.ind}`)},
+    {l:`Balões — ${comp.numBaloes}x`,p:pv("baloes"),sub:plural(comp.numBaloes, `${comp.numBaloes} parcela fixa durante a obra · ${emp.ind}`, `${comp.numBaloes} parcelas fixas durante a obra · ${emp.ind}`)},
     {l:"Permuta",p:pv("permuta"),sub:"Bem avaliado com 10% de deságio sobre valor de mercado"},
   ].filter(it=>it.p>0).map(it=>`
   <div class="comp-item">
@@ -350,7 +350,7 @@ ${descOn?`<div class="sec">
 </div>
 
 <div class="sec">
-  <div class="sec-title">Fluxo de pagamento — período de obra · ${emp.mesesObra} meses · ${emp.ind}</div>
+  <div class="sec-title">Fluxo de pagamento — período de obra · ${plural(emp.mesesObra, `${emp.mesesObra} mês`, `${emp.mesesObra} meses`)} · ${emp.ind}</div>
   <table>
     <thead><tr>
       <th style="text-align:left">Mês / Evento</th>
@@ -812,7 +812,7 @@ function StepEmp({ emps, empId, setEmpId, onNext }) {
               </div>
               <div style={{paddingLeft:26,fontFamily:C.ff,fontSize:12,color:C.muted}}>{e.end}</div>
               <div style={{paddingLeft:26,marginTop:6,display:"flex",gap:18,flexWrap:"wrap"}}>
-                {[["Entrega",e.entrega],["Obra",`${e.mesesObra} meses`],["Disponíveis",`${disp} / ${e.uns.length}`,"#4ade80"]].map(([l,v,c])=>(
+                {[["Entrega",e.entrega],["Obra",plural(e.mesesObra, `${e.mesesObra} mês`, `${e.mesesObra} meses`)],["Disponíveis",`${disp} / ${e.uns.length}`,"#4ade80"]].map(([l,v,c])=>(
                   <span key={l} style={{fontFamily:C.ff,fontSize:12}}>
                     <span style={{color:"#5a5060"}}>{l}: </span>
                     <span style={{color:c||"#c8c0b0"}}>{v}</span>
@@ -1177,7 +1177,7 @@ function StepSimulador({ emp, selUnits, onBack }) {
 
       {/* FLOW TABLE */}
       {isValid&&(!descOn||!desc.isBlocked)&&fluxo.length>0?(
-        <Card title="Fluxo de Pagamento" subtitle={`${emp.mesesObra} meses · ${emp.ind}${descOn&&desc.total>0?` · desconto ${desc.total}% aplicado`:" · sem desconto"}`}>
+        <Card title="Fluxo de Pagamento" subtitle={`${plural(emp.mesesObra, `${emp.mesesObra} mês`, `${emp.mesesObra} meses`)} · ${emp.ind}${descOn&&desc.total>0?` · desconto ${desc.total}% aplicado`:" · sem desconto"}`}>
           <div style={{overflowX:"auto"}}>
             <table style={{width:"100%",borderCollapse:"collapse",fontFamily:C.ff,fontSize:12,minWidth:520}}>
               <thead>
