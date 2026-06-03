@@ -89,6 +89,10 @@ const DEFAULT_EMPS = {
       {id:"VG29", an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:53562.06,    st:"D"},
       {id:"VG30", an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:53562.06,    st:"D"},
       {id:"VG32", an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:53562.06,    st:"D"},
+      {id:"VG1",  an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:50058.00,    st:"V"},
+      {id:"VG2",  an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:50058.00,    st:"V"},
+      {id:"VG6",  an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:48600.00,    st:"V"},
+      {id:"VG7",  an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:53562.06,    st:"V"},
     ],
   },
   liv: {
