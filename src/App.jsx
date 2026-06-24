@@ -41,8 +41,8 @@ const DEFAULT_EMPS = {
       {id:"305",  an:3,  tp:"Studio",        ar:25.00,  q:1, vg:0, vl:320404.80,   st:"D"},
       {id:"307",  an:3,  tp:"Studio",        ar:25.00,  q:1, vg:0, vl:320404.80,   st:"V"},
       {id:"309",  an:3,  tp:"Studio",        ar:25.00,  q:1, vg:0, vl:320404.80,   st:"D"},
-      {id:"310",  an:3,  tp:"Studio",        ar:25.00,  q:1, vg:0, vl:320404.80,   st:"D"},
-      {id:"311",  an:3,  tp:"Studio",        ar:25.00,  q:1, vg:0, vl:320404.80,   st:"D"},
+      {id:"310",  an:3,  tp:"Studio",        ar:25.00,  q:1, vg:0, vl:320404.80,   st:"V"},
+      {id:"311",  an:3,  tp:"Studio",        ar:25.00,  q:1, vg:0, vl:320404.80,   st:"V"},
       {id:"312",  an:3,  tp:"Studio",        ar:25.00,  q:1, vg:0, vl:299640.00,   st:"V"},
       {id:"313",  an:3,  tp:"Studio Loft",   ar:25.00,  q:1, vg:0, vl:426206.40,   st:"D"},
       {id:"314",  an:3,  tp:"Studio Loft",   ar:25.00,  q:1, vg:0, vl:426206.40,   st:"D"},
@@ -81,13 +81,14 @@ const DEFAULT_EMPS = {
       {id:"1102", an:11, tp:"Tipo H",        ar:95.00,  q:3, vg:2, vl:998285.00,   st:"V"},
       {id:"1201", an:12, tp:"Tipo F",        ar:88.00,  q:3, vg:2, vl:1013665.03,  st:"D"},
       {id:"1202", an:12, tp:"Tipo H",        ar:95.00,  q:3, vg:2, vl:1087464.95,  st:"D"},
-      {id:"VG3",  an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:53562.06,    st:"D"},
-      {id:"VG4",  an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:53562.06,    st:"D"},
-      {id:"VG5",  an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:53562.06,    st:"D"},
-      {id:"VG8",  an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:53562.06,    st:"D"},
-      {id:"VG9",  an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:53562.06,    st:"D"},
-      {id:"VG10", an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:53562.06,    st:"D"},
-      {id:"VG11", an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:53562.06,    st:"V"},
+      {id:"VG05", an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:56240.16,    st:"D"},
+      {id:"VG06", an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:56240.16,    st:"D"},
+      {id:"VG08", an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:56240.16,    st:"D"},
+      {id:"VG26", an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:56240.16,    st:"D"},
+      {id:"VG28", an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:56240.16,    st:"D"},
+      {id:"VG29", an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:56240.16,    st:"D"},
+      {id:"VG30", an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:56240.16,    st:"D"},
+      {id:"VG32", an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:56240.16,    st:"D"},
       {id:"VG1",  an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:50058.00,    st:"V"},
       {id:"VG2",  an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:50058.00,    st:"V"},
       {id:"VG6",  an:0,  tp:"Vaga Comum",    ar:10.80,  q:0, vg:1, vl:48600.00,    st:"V"},
@@ -104,7 +105,7 @@ const DEFAULT_EMPS = {
       {id:"301", an:3, tp:"Padrão", ar:77.10,  q:2, vg:2, vl:null,      st:"V"},
       {id:"302", an:3, tp:"Padrão", ar:89.12,  q:2, vg:1, vl:null,      st:"V"},
       {id:"401", an:4, tp:"Padrão", ar:77.10,  q:2, vg:2, vl:null,      st:"V"},
-      {id:"402", an:4, tp:"Padrão", ar:89.12,  q:2, vg:2, vl:862870.24, st:"D"},
+      {id:"402", an:4, tp:"Padrão", ar:89.12,  q:2, vg:2, vl:862870.24, st:"V"},
       {id:"501", an:5, tp:"Padrão", ar:77.10,  q:2, vg:2, vl:null,      st:"V"},
       {id:"502", an:5, tp:"Padrão", ar:89.12,  q:2, vg:2, vl:null,      st:"V"},
       {id:"601", an:6, tp:"Duplex", ar:97.74,  q:2, vg:2, vl:null,      st:"V"},
@@ -812,7 +813,7 @@ function StepEmp({ emps, empId, setEmpId, onNext }) {
               </div>
               <div style={{paddingLeft:26,fontFamily:C.ff,fontSize:12,color:C.muted}}>{e.end}</div>
               <div style={{paddingLeft:26,marginTop:6,display:"flex",gap:18,flexWrap:"wrap"}}>
-                {[["Entrega",e.entrega],["Obra",`${e.mesesObra} meses`],["Disponíveis",`${disp} / ${e.uns.length}`,"#4ade80"]].map(([l,v,c])=>(
+                {[["Entrega",e.entrega],["Obra",e.id === "liv" ? "1 mês" : `${e.mesesObra} meses`],["Disponíveis",`${disp} / ${e.uns.length}`,"#4ade80"]].map(([l,v,c])=>(
                   <span key={l} style={{fontFamily:C.ff,fontSize:12}}>
                     <span style={{color:"#5a5060"}}>{l}: </span>
                     <span style={{color:c||"#c8c0b0"}}>{v}</span>
